@@ -38,12 +38,22 @@
 	<dependency>
 	    <groupId>com.github.magneticant</groupId>
 	    <artifactId>Storage-Manager-Common</artifactId>
-	    <version>1.4.0</version>
+	    <version>1.4</version>
 	</dependency>
 	<dependency>
-   	 	<groupId>com.toedter</groupId>
-    	<artifactId>jcalendar</artifactId>
-    	<version>1.4</version>
+	    <groupId>com.github.magneticant</groupId>
+	    <artifactId>Storage-Manager-Common</artifactId>
+	    <version>1.7.1</version>
+	</dependency>
+		<dependency>
+    		<groupId>com.toedter</groupId>
+    		<artifactId>jcalendar</artifactId>
+   			<version>1.4</version>
+	</dependency>
+	<dependency>
+    	<groupId>org.apache.commons</groupId>
+    	<artifactId>commons-lang3</artifactId>
+    	<version>3.4</version>
 	</dependency>
   </dependencies>
 </project>

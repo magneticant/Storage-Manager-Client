@@ -7,6 +7,12 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.lang3.StringEscapeUtils;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+
 import rs.np.storage_manager_common.connection.*;
 import rs.np.storage_manager_common.domain.*;
 import rs.np.storage_manager_common.domain.abstraction.implementation.*;
@@ -18,15 +24,17 @@ import rs.np.storage_manager_common.domain.abstraction.*;
  */
 public class Client {
     Socket socket;
-    Sender sender; 
-    Receiever receiver;
+    SenderJSON sender; 
+    ReceiverJSON receiver;
     private static Client instance;
-
+    private Gson gson;
+    
     public Client() throws IOException {
         socket = new Socket("127.0.0.1", 6969);
         System.out.println("Client connected to the server on port 6969.");
-        sender = new Sender(socket);
-        receiver = new Receiever(socket);
+        sender = new SenderJSON(socket);
+        receiver = new ReceiverJSON(socket);
+        gson = new GsonBuilder().serializeNulls().create();
     }
     
     public static Client getInstance() throws IOException{
@@ -46,9 +54,9 @@ public class Client {
         user.setPassword(password);
         user.setUsername(username);
         user.setMode(WhereClauseMode.BY_USERNAME_PASSWORD);
-
         Response resp = sendReceiveThrowEx(user, Operation.LOGIN);
-        return (User)resp.getResponse();
+//        return (User)resp.getResponse();
+        return gson.fromJson(resp.getResponse().toString(), User.class);
     }
 
     public List<Product> getAllProducts(Product p) throws Exception {
@@ -114,11 +122,21 @@ public class Client {
     private Response sendReceiveThrowEx(DomainClass object, Operation operation) throws Exception {
         Request req = new Request(object, operation);
         sender.sendObject(req);
-        Response resp = (Response) receiver.receiveObject();
+        String resp = receiver.receiveObject();
+       
+        Response respObj = new Gson().fromJson(resp, Response.class);
         
-        if(resp.getEx() != null){
-            throw resp.getEx();
+        if(respObj.getExMessage() != null){
+        	Exception ex = new Exception(respObj.getExMessage());
+            throw ex;
         }
-        return resp;
+        
+        return respObj;
     }
+    
+//    private String removeQuotesAndUnescape(String uncleanJson) {
+//        String noQuotes = uncleanJson.replaceAll("^\"|\"$", "");
+//
+//        return StringEscapeUtils.unescapeJava(noQuotes);
+//    }
 }
