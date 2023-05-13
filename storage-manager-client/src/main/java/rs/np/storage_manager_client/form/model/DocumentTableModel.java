@@ -116,10 +116,10 @@ public class DocumentTableModel extends AbstractTableModel{
     }
     
     public void addItem(AbstractDocumentItem item){
-        item.setDocument(document);
+        item.setDocumentID(document.getID());
         item.setFirm(document.getFirm());
         item.setSecondParticipant(document.getSecondParticipant());
-        document.getItems().add(item);
+        document.addItem(item);
         fireTableRowsInserted(document.getItems().size()-1,
                 document.getItems().size()-1);
     }

@@ -380,7 +380,7 @@ public class BillOfLadingController {
         for(AbstractDocumentItem item : bill.getItems()){
             item.setFirm(bill.getFirm());
             item.setSecondParticipant(bill.getSecondParticipant());
-            item.setDocument(bill);
+            item.setDocumentID(bill.getID());
         }
     }
 }
