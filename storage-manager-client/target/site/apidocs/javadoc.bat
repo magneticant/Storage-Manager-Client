@@ -1,0 +1,1 @@
+cmd.exe /X /C "C:\Users\Milan\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.6.v20230204-1729\jre\bin\javadoc.exe -classpath /path/to/classpath.txt @options @packages"

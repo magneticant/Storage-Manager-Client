@@ -217,7 +217,9 @@ public class ProductController {
         
         try {
             List<Product> products = Client.getInstance().getAllProducts();
-            
+            System.out.println("PRODUCT CONTROLLER! AllProducts: " + products);
+            System.out.println(products.get(0));
+            System.out.println(products.getClass());
             productForm.setTableModel(new ProductTableModel(products, mode));
             productForm.getTblProduct().setModel(productForm.getTableModel());
             //addCBType(tableModel);

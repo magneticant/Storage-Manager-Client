@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/Milan/.m2/repository/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar;C:/Users/Milan/.m2/repository/com/toedter/jcalendar/1.4/jcalendar-1.4.jar;C:/Users/Milan/.m2/repository/org/apache/commons/commons-lang3/3.4/commons-lang3-3.4.jar;C:/Users/Milan/.m2/repository/rs/np/storage-manager-common/1.1.0/storage-manager-common-1.1.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'C:/Users/Milan/git/Client/storage-manager-client/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Milan/git/Client/storage-manager-client/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'storage-manager-client 1.1.0 API'
+-use
+-version
+-windowtitle
+'storage-manager-client 1.1.0 API'

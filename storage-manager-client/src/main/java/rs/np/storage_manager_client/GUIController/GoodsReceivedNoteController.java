@@ -322,7 +322,7 @@ public class GoodsReceivedNoteController {
         for(AbstractDocumentItem item : note.getItems()){
             item.setFirm(note.getFirm());
             item.setSecondParticipant(note.getSecondParticipant());
-            item.setDocument(note);
+            item.setDocumentID(note.getID());
         }
     }
 }

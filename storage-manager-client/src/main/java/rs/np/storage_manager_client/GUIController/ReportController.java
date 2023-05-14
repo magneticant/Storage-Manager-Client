@@ -58,6 +58,7 @@ public class ReportController {
                 ReportTableModel model = (ReportTableModel)reportForm.getTblReport().getModel();
                 Report report = model.getReport();
                 report.setReportDate(reportDate);
+                report.assignItemIDs();
                 report.setTotalCapacity(Double.parseDouble(reportForm.getTxtCapacity().getText()));
                 Client.getInstance().insertReport(report);
         
@@ -234,7 +235,7 @@ public class ReportController {
             if(capacity != 0){
                 item.setTotalAvailableCapacity(capacity);
             }
-            item.setReport(reportForm.getReport());
+            item.setReportID(reportForm.getReport().getReportDate());
             reportForm.getReport().getReportItems().add(item);
         }
         setModel(reportForm.getReport());

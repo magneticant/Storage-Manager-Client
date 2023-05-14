@@ -260,7 +260,7 @@ FormMode mode;
             if(capacity != 0){
                 item.setTotalAvailableCapacity(capacity);
             }
-            item.setReport(report);
+            item.setReportID(report.getReportDate());
             report.getReportItems().add(item);
         }
         setModel(report);
