@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"rs.np.storage_manager_client.connection","l":"Client"}];updateSearchResults();

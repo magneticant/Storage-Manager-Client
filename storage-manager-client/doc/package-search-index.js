@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"rs.np.storage_manager_client.connection"}];updateSearchResults();
