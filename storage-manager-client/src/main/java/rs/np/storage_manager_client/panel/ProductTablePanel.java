@@ -113,10 +113,10 @@ public class ProductTablePanel extends javax.swing.JPanel {
         
         AbstractDocumentItem item = new GoodsReceivedNoteItem();
         item.setProduct((Product)getCbProducts().getSelectedItem());
-        if(item == null){
-            JOptionPane.showMessageDialog(this, "Item is null.");
-            return;
-        }
+//        if(item == null){
+//            JOptionPane.showMessageDialog(this, "Item is null.");
+//            return;
+//        }
         if(model.checkIfExists(item)){
             JOptionPane.showMessageDialog(this, "Item already added.");
             return;

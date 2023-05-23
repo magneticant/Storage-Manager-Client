@@ -66,10 +66,10 @@ public class GoodsReceivedNoteController {
                 DocumentTableModel model = (DocumentTableModel)noteForm.getTblItem().getModel();
                 GoodsReceivedNoteItem item = new GoodsReceivedNoteItem();
                 item.setProduct((Product)noteForm.getCbProducts().getSelectedItem());
-                    if(item == null){
-                        JOptionPane.showMessageDialog(noteForm, "Item is null.");
-                    return;
-                    }
+//                    if(item == null){
+//                        JOptionPane.showMessageDialog(noteForm, "Item is null.");
+//                    return;
+//                    }
                     if(model.checkIfExists(item)){
                         JOptionPane.showMessageDialog(noteForm, "Item already added.");
                     return;

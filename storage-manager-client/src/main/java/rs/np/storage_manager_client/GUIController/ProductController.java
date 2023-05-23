@@ -271,11 +271,11 @@ public class ProductController {
     }
       private void addCBType(ProductTableModel tableModel) {
         TableColumn typeColumn = productForm.getTblProduct().getColumnModel().getColumn(5);
-        JComboBox cbType = new JComboBox();
+        JComboBox<ProductType> cbType = new JComboBox<>();
         prepareCbType(cbType);
         typeColumn.setCellEditor(new DefaultCellEditor(cbType));
     }
-      private void prepareCbType(JComboBox cbType) {
+      private void prepareCbType(JComboBox<ProductType> cbType) {
         cbType.removeAllItems();
         for(ProductType type : ProductType.values()){
             cbType.addItem(type);

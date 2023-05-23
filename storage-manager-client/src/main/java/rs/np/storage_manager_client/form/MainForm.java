@@ -2,8 +2,6 @@
 package rs.np.storage_manager_client.form;
 
 import java.awt.event.ActionListener;
-import java.net.Socket;
-import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;

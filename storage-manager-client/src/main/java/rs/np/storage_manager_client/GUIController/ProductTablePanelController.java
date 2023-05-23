@@ -52,10 +52,10 @@ public class ProductTablePanelController {
                     item = new BillOfLadingItem();
                 
                 item.setProduct((Product)productTablePanel.getCbProducts().getSelectedItem());
-                if(item == null){
-                    JOptionPane.showMessageDialog(productTablePanel, "Item is null.");
-                    return;
-                }
+//                if(item == null){
+//                    JOptionPane.showMessageDialog(productTablePanel, "Item is null.");
+//                    return;
+//                }
                 if(model.checkIfExists(item)){
                  JOptionPane.showMessageDialog(productTablePanel, "Item already added.");
                  return;

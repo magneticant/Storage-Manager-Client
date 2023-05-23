@@ -4,12 +4,7 @@ package rs.np.storage_manager_client.connection;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.ArrayList;
 import java.util.List;
-
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import rs.np.storage_manager_common.connection.Operation;
 import rs.np.storage_manager_common.connection.abstraction.Receiver;
@@ -17,7 +12,6 @@ import rs.np.storage_manager_common.connection.abstraction.Request;
 import rs.np.storage_manager_common.connection.abstraction.Response;
 import rs.np.storage_manager_common.connection.abstraction.Sender;
 import rs.np.storage_manager_common.connection.abstraction.JSONImpl.*;
-import rs.np.storage_manager_common.connection.abstraction.objectImpl.*;
 import rs.np.storage_manager_common.domain.*;
 import rs.np.storage_manager_common.domain.abstraction.implementation.*;
 import rs.np.storage_manager_common.domain.abstraction.*;

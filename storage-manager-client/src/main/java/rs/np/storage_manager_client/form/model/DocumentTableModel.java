@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 import javax.swing.table.AbstractTableModel;
 
 import rs.np.storage_manager_common.domain.abstraction.*;
-import rs.np.storage_manager_common.domain.abstraction.implementation.*;
 /**
  *
  * @author Milan
