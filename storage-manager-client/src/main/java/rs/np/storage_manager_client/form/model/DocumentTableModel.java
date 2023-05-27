@@ -11,15 +11,16 @@ import rs.np.storage_manager_common.domain.abstraction.*;
  * @author Milan
  */
 public class DocumentTableModel extends AbstractTableModel{
-   private final AbstractDocument document;
+	private static final long serialVersionUID = 3763417225499010506L;
+	private final AbstractDocument document;
    private final String[] columnNames = {
        "Ordinal No.", "Product name", "Product Qty.",
        "Price (per unit)", "Price (total)" 
    };
-   private final Object[] columnTypes = {
-     Integer.class, String.class, Integer.class, 
-       BigDecimal.class, BigDecimal.class
-   };
+//   private final Object[] columnTypes = {
+//     Integer.class, String.class, Integer.class, 
+//       BigDecimal.class, BigDecimal.class
+//   };
 //   private GoodsReceivedNoteForm form;
    
     public DocumentTableModel(AbstractDocument document) {

@@ -2,11 +2,6 @@
 package rs.np.storage_manager_client.form.model;
 
 
-import java.io.IOException;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 
 import rs.np.storage_manager_client.form.mode.FormMode;
@@ -19,12 +14,13 @@ import rs.np.storage_manager_common.domain.ReportItem;
  * @author Milan
  */
 public class ReportTableModel extends AbstractTableModel{
-    private final String[] columnNames = {
+	private static final long serialVersionUID = -6470877744601716139L;
+	private final String[] columnNames = {
       "Ordinal number", "Product name", "Capacity available", "Capacity used (%)"   
     };
-    private final Object[] columnTypes = {
-        Integer.class, String.class, Integer.class, Double.class
-    };
+//    private final Object[] columnTypes = {
+//        Integer.class, String.class, Integer.class, Double.class
+//    };
     private Report report;
     private ReportForm form;
     

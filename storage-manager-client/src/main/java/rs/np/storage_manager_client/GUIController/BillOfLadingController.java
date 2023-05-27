@@ -96,10 +96,10 @@ public class BillOfLadingController {
                 DocumentTableModel model = (DocumentTableModel)billForm.getTblItems().getModel();
                  BillOfLadingItem item = new BillOfLadingItem();
                     item.setProduct((Product)billForm.getCbProducts().getSelectedItem());
-                    if(item == null){
-                        JOptionPane.showMessageDialog(billForm, "Item is null.");
-                        return;
-                    }
+//                    if(item == null){
+//                        JOptionPane.showMessageDialog(billForm, "Item is null.");
+//                        return;
+//                    }
                     if(model.checkIfExists(item)){
                         JOptionPane.showMessageDialog(billForm, "Item already added.");
                         return;

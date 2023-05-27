@@ -16,7 +16,8 @@ import rs.np.storage_manager_common.domain.ProductType;
  * @author Milan
  */
 public class ProductTableModel extends AbstractTableModel{
-    private final String[] columnNames = { 
+	private static final long serialVersionUID = -6989023306107257732L;
+	private final String[] columnNames = { 
         "ID", "Product Name", "Weight", "Fragile", "Amount", "Type", "Price",
     };
     private final Object[] columnTypes = {
