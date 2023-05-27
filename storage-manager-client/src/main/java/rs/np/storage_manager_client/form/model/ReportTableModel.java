@@ -48,7 +48,7 @@ public class ReportTableModel extends AbstractTableModel{
         try{ReportItem ri = report.getReportItems().get(rowIndex);
         
         switch(columnIndex){
-           case 0: return rowIndex;
+           case 0: return rowIndex + 1;
             case 1: 
                 if(ri == null || ri.getProduct() == null || ri.getProduct().getProductName() == null){
                     return "Unknown product";
