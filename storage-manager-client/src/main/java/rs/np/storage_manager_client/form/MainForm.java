@@ -90,7 +90,7 @@ public class MainForm extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/rs/np/storage_manager_client/image/image1.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/image1.jpg"))); // NOI18N
         jLabel1.setAutoscrolls(true);
 
         lblDisplay.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
